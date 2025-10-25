@@ -1,195 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Swarajya Kitchen - Authentic Indian Restaurant</title>
-  <meta name="description" content="Swarajya Kitchen - Authentic flavors of India. Full menu of appetizers, mains, breads, desserts, and beverages. Dine-in, takeaway, and catering." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root{
-      --primary:#b22222; /* firebrick */
-      --accent:#f4a261;
-      --bg:#fffaf6;
-      --text:#222;
-      --muted:#666;
-      --card:#ffffff;
-      --success:#1b5e20;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg)}
-    a{color:var(--primary);text-decoration:none}
-    img{max-width:100%;display:block}
-    /* Nav */
-    .nav{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #eee}
-    .nav .wrap{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 16px;gap:16px}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--primary)}
-    .brand .logo{width:34px;height:34px;border-radius:50%;background:var(--primary);display:grid;place-items:center;color:#fff;font-weight:800}
-    .nav a.link{color:#333;padding:8px 10px;border-radius:6px}
-    .nav a.link:hover{background:#f7f7f7}
-    .btn{background:var(--primary);color:#fff;border:0;padding:10px 16px;border-radius:8px;cursor:pointer;font-weight:600}
-    .btn.secondary{background:var(--accent);color:#5b2d0d}
-    .btn.ghost{background:transparent;color:var(--primary);border:2px solid var(--primary)}
-    /* Hero */
-    .hero{display:grid;place-items:center;padding:56px 16px 32px;background:linear-gradient(180deg,#fff, #fff5f0)}
-    .hero .inner{max-width:1100px;width:100%;display:grid;grid-template-columns:1.1fr 0.9fr;gap:28px;align-items:center}
-    .hero h1{font-size:clamp(28px,4vw,48px);margin:0 0 10px;color:#111}
-    .hero p{color:var(--muted);margin:0 0 18px}
-    .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
-    .tag{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid #eee;border-radius:999px;padding:6px 12px;color:#333;font-size:14px}
-    .hero img{border-radius:14px;box-shadow:0 20px 60px rgba(178,34,34,.25)}
-    /* Sections */
-    section{padding:56px 16px}
-    .container{max-width:1200px;margin:0 auto}
-    h2.section-title{font-size:28px;margin:0 0 8px}
-    p.section-sub{margin:0 0 24px;color:var(--muted)}
-    /* About */
-    .about{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
-    .card{background:var(--card);border:1px solid #eee;border-radius:14px;padding:18px}
-    /* Menu */
-    .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .menu-cat{background:#fff;border:1px solid #eee;border-radius:14px;overflow:hidden}
-    .menu-cat header{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:#fff5f0;border-bottom:1px solid #f2e6e3}
-    .menu-items{display:grid;gap:0}
-    .item{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:12px 14px;border-bottom:1px dashed #eee}
-    .item:last-child{border-bottom:0}
-    .item .dot{width:8px;height:8px;border-radius:50%;background:var(--primary)}
-    .item h4{margin:0;font-size:15px}
-    .item p{margin:2px 0 0;color:#666;font-size:13px}
-    .price{font-weight:600;color:#111}
-    .veg{color:#1b5e20;font-weight:600}
-    .nonveg{color:#7b1fa2;font-weight:600}
-    /* Gallery */
-    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    .gallery img{height:180px;object-fit:cover;border-radius:12px}
-    /* Contact */
-    .contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
-    form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    input,textarea{width:100%;padding:12px 14px;border-radius:10px;border:1px solid #ddd;font:inherit}
-    textarea{min-height:120px}
-    .footer{background:#0f0f0f;color:#ddd;padding:28px 16px}
-    .footer a{color:#fff}
-    /* Responsive */
-    @media (max-width: 980px){
-      .hero .inner{grid-template-columns:1fr}
-      .about{grid-template-columns:1fr}
-      .menu-grid{grid-template-columns:1fr 1fr}
-      .gallery{grid-template-columns:1fr 1fr}
-      .contact-grid{grid-template-columns:1fr}
-    }
-    @media (max-width: 640px){
-      .menu-grid{grid-template-columns:1fr}
-      .gallery{grid-template-columns:1fr}
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Swarajya Kitchen - Pure Vegetarian Restaurant celebrating Maharashtra's heritage">
+    <title>Swarajya Kitchen - Pure Vegetarian Heritage Dining</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary-color: #ff6b35; --secondary-color: #f7931e; --dark-color: #2c3e50;
+            --light-color: #ecf0f1; --white: #ffffff; --saffron: #ff9933;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--dark-color); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        nav { background: var(--dark-color); color: var(--white); padding: 1rem 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        nav .container { display: flex; justify-content: space-between; align-items: center; }
+        nav h1 { font-size: 1.8rem; color: var(--saffron); }
+        nav ul { display: flex; list-style: none; gap: 2rem; }
+        nav a { color: var(--white); text-decoration: none; transition: color 0.3s; }
+        nav a:hover { color: var(--saffron); }
+        .hero { background: linear-gradient(135deg, var(--saffron) 0%, var(--secondary-color) 100%); color: var(--white); padding: 100px 0; text-align: center; }
+        .hero h2 { font-size: 3rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .hero p { font-size: 1.3rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .btn { display: inline-block; padding: 12px 30px; background: var(--white); color: var(--primary-color); text-decoration: none; border-radius: 5px; font-weight: bold; transition: transform 0.3s; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        section { padding: 60px 0; }
+        section h2 { text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: var(--saffron); }
+        section h3 { font-size: 1.8rem; margin: 2rem 0 1rem; color: var(--primary-color); border-bottom: 3px solid var(--saffron); padding-bottom: 10px; }
+        .about { background: var(--light-color); }
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-top: 2rem; }
+        .about-text p { margin-bottom: 1rem; font-size: 1.1rem; line-height: 1.8; }
+        .about-image { text-align: center; }
+        .about-image img { max-width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .menu-item { background: var(--white); padding: 1.5rem; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .menu-item:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(255, 107, 53, 0.2); }
+        .menu-item h4 { color: var(--saffron); font-size: 1.3rem; margin-bottom: 0.5rem; }
+        .menu-item .price { color: var(--primary-color); font-weight: bold; font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .menu-item p { color: #666; font-size: 0.95rem; }
+        .menu-category { margin-bottom: 3rem; }
+        .heritage-note { background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%); padding: 20px; border-radius: 10px; border-left: 5px solid var(--saffron); margin: 2rem 0; text-align: center; font-style: italic; color: #8B4513; }
+        .gallery { background: var(--light-color); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .gallery-item { position: relative; overflow: hidden; border-radius: 10px; height: 250px; background: #ddd; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+        .gallery-item:hover img { transform: scale(1.1); }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem; }
+        .contact-info { display: grid; gap: 1.5rem; }
+        .contact-info div { background: var(--light-color); padding: 1.5rem; border-radius: 10px; }
+        .contact-info h3 { color: var(--saffron); font-size: 1.3rem; margin-bottom: 0.5rem; border: none; padding: 0; }
+        .contact-form { background: var(--light-color); padding: 2rem; border-radius: 10px; }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px; font-size: 1rem; transition: border-color 0.3s; }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--saffron); }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        button[type="submit"] { width: 100%; padding: 12px; background: var(--saffron); color: var(--white); border: none; border-radius: 5px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: background 0.3s; }
+        button[type="submit"]:hover { background: var(--primary-color); }
+        footer { background: var(--dark-color); color: var(--white); text-align: center; padding: 2rem 0; }
+        footer p { margin: 0.5rem 0; }
+        .footer-tagline { color: var(--saffron); font-style: italic; margin-top: 1rem; }
+        @media (max-width: 768px) {
+            nav ul { gap: 1rem; font-size: 0.9rem; }
+            .hero h2 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .about-content, .contact-grid { grid-template-columns: 1fr; }
+            section h2 { font-size: 2rem; }
+            .menu-grid { grid-template-columns: 1fr; }
+        }
+        html { scroll-behavior: smooth; }
+    </style>
 </head>
 <body>
-  <!-- Nav -->
-  <nav class="nav" aria-label="Primary">
-    <div class="wrap">
-      <a class="brand" href="#home"><span class="logo">SK</span> Swarajya Kitchen</a>
-      <div class="links">
-        <a class="link" href="#home">Home</a>
-        <a class="link" href="#about">About</a>
-        <a class="link" href="#menu">Menu</a>
-        <a class="link" href="#gallery">Gallery</a>
-        <a class="link" href="#contact">Contact</a>
-        <a class="btn ghost" href="#reserve">Reserve</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <header id="home" class="hero">
-    <div class="inner">
-      <div>
-        <span class="tag">Authentic • Maharashtrian & Pan‑Indian</span>
-        <h1>Experience the Royal Flavors of Swarajya</h1>
-        <p>From hearty misal and melt‑in‑mouth kebabs to fragrant biryanis and fresh tandoor breads—crafted with seasonal ingredients and time‑honored techniques.</p>
-        <div class="cta">
-          <a class="btn" href="#menu">Explore Full Menu</a>
-          <a class="btn secondary" href="#contact">Order / Catering</a>
+    <nav>
+        <div class="container">
+            <h1>🚩 Swarajya Kitchen</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-      </div>
-      <img src="https://images.unsplash.com/photo-1604908176997-43162f7e4d49?q=80&w=1400&auto=format&fit=crop" alt="Indian thali spread" />
-    </div>
-  </header>
+    </nav>
 
-  <!-- About -->
-  <section id="about">
-    <div class="container about">
-      <div class="card">
-        <h2 class="section-title">Our Story</h2>
-        <p class="section-sub">Inspired by the valor of Swarajya, our kitchen celebrates bold flavors and warm hospitality.</p>
-        <p>We mill our spices in‑house, slow‑cook gravies to perfection, and bake breads in a traditional tandoor. Whether you choose a quick lunch or a regal feast, our food is made fresh to order.</p>
-      </div>
-      <div class="card">
-        <h2 class="section-title">Hours & Location</h2>
-        <p>Mon–Thu: 11:30 AM – 10:00 PM<br>Fri–Sun: 11:00 AM – 11:00 PM</p>
-        <p>Shaniwar Peth, Pune • +91 98765 43210</p>
-        <p><strong>Dine‑in</strong>, <strong>Takeaway</strong> and <strong>Catering</strong> available</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Menu -->
-  <section id="menu">
-    <div class="container">
-      <h2 class="section-title">Complete Menu</h2>
-      <p class="section-sub">Over 50 dishes across appetizers, mains, breads, desserts, and beverages.</p>
-
-      <div class="menu-grid">
-        <!-- Appetizers -->
-        <div class="menu-cat">
-          <header>
-            <h3>Appetizers</h3>
-            <span class="veg">Veg & Non‑Veg</span>
-          </header>
-          <div class="menu-items">
-            <div class="item"><span class="dot"></span><div><h4>Paneer Tikka</h4><p>Smoky cottage cheese, bell peppers, onions</p></div><div class="price">₹260</div></div>
-            <div class="item"><span class="dot"></span><div><h4>Hara Bhara Kebab</h4><p>Spinach, peas, herbs, hung curd</p></div><div class="price">₹220</div></div>
-            <div class="item"><span class="dot"></span><div><h4>Veg Seekh Kebab</h4><p>Mixed veg mince, garam masala</p></div><div class="price">₹230</div></div>
-            <div class="item"><span class="dot"></span><div><h4>Aloo Tikki Chaat</h4><p>Tamarind, mint, yogurt, sev</p></div><div class="price">₹180</div></div>
-            <div class="item"><span class="dot"></span><div><h4>Dahi Puri</h4><p>Stuffed puris with spiced yogurt</p></div><div class="price">₹160</div></div>
-            <div class="item"><span class="dot"></span><div><h4>Paani Puri</h4><p>Tangy mint water, potatoes, chickpeas</p></div><div class="price">₹140</div></div>
-            <div class="item"><span class="dot"></span><div><h4>Onion Pakoda</h4><p>Crispy gram‑flour fritters</p></div><div class="price">₹150</div></div>
-            <div class="item"><span class="dot"></span><div><h4>Chicken Tikka</h4><p>Classic tandoori with kasuri methi</p></div><div class="price">₹320</div></div>
-            <div class="item"><span class="dot"></span><div><h4>Tandoori Chicken (Half)</h4><p>House spice rub, charred lemon</p></div><div class="price">₹340</div></div>
-            <div class="item"><span class="dot"></span><div><h4>Malai Chicken Tikka</h4><p>Yogurt, cream, white pepper</p></div><div class="price">₹340</div></div>
-            <div class="item"><span class="dot"></span><div><h4>Fish Koliwada</h4><p>Red masala crispy fry</p></div><div class="price">₹380</div></div>
-            <div class="item"><span class="dot"></span><div><h4>Prawns Koliwada</h4><p>Amritsari style, ajwain hint</p></div><div class="price">₹430</div></div>
-          </div>
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to Swarajya Kitchen</h2>
+            <p>Experience authentic pure vegetarian cuisine inspired by Maharashtra's glorious heritage</p>
+            <a href="#menu" class="btn">View Our Menu</a>
         </div>
+    </section>
 
-        <!-- Maharashtrian Specials -->
-        <div class="menu-cat">
-          <header>
-            <h3>Maharashtrian Specials</h3>
-            <span class="veg">Regional</span>
-          </header>
-          <div class="menu-items">
-            <div class="item"><span class="dot"></span><div><h4>Misal Pav</h4><p>Sprouts usal, farsan, kat rassa</p></div><div class="price">₹160</div></div>
-            <div class="item"><span class="dot"></span><div><h4>Pav Bhaji</h4><p>Buttery, with extra pav</p></div><div class="price">₹170</div></div>
-            <div class="item"><span class="dot"></span><div><h4>Vada Pav</h4><p>Gunpowder chutney, green chili</p></div><div class="price">₹60</div></div>
-            <div class="item"><span class="dot"></span><div><h4>Poha</h4><p>Kanda‑batata, peanuts, lemon</p></div><div class="price">₹110</div></div>
-            <div class="item"><span class="dot"></span><div><h4>Sabudana Khichdi</h4><p>Fasting special, ghee roasted</p></div><div class="price">₹180</div></div>
-            <div class="item"><span class="dot"></span><div><h4>Pithla Bhakri</h4><p>Gram‑flour curry, jowar bhakri, thecha</p></div><div class="price">₹220</div></div>
-            <div class="item"><span class="dot"></span><div><h4>Chicken Rassa</h4><p>Kolhapuri spice, coconut</p></div><div class="price">₹320</div></div>
-            <div class="item"><span class="dot"></span><div><h4>Mutton Rassa</h4><p>Homestyle, medium heat</p></div><div class="price">₹420</div></div>
-          </div>
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Our Heritage</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p><strong>Swarajya Kitchen</strong> celebrates the rich culinary traditions of Maharashtra. Inspired by the valor of Maratha warriors and the bounty of our land, we serve pure vegetarian dishes named after historic forts and regions.</p>
+                    <p>Each dish tells a story of our glorious past while delighting your taste buds with authentic flavors and the finest ingredients, sourced locally whenever possible.</p>
+                    <p>Our experienced chefs combine traditional recipes with modern techniques to bring you an unforgettable dining experience that honors our heritage while embracing contemporary tastes.</p>
+                    <p><em>🌱 100% Pure Vegetarian • 🏰 Heritage Inspired • 🎨 Cultural Pride</em></p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=500" alt="Restaurant Interior">
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Vegetarian Mains -->
-        <div class="menu-cat">
-          <header>
-            <h3>Vegetarian Mains</h3>
-            <span class="veg">Veg</span>
-          </header>
-          <div class="menu-items">
-            <div class="item"><span class="dot"></span><div><h4>Paneer Butter Masala</h4><p>Silky tomato‑cashew makhani</p></div><div class="price">₹280</div></div>
-            <div class="item"><span class="dot"></span><div><h4>Kadai Paneer</h4><p>Crushed spices, capsicum, onion</p></div><div class="price">₹270</div></div>
-            <div class="item"><span class="dot"></span><div><h4>Palak Paneer</h4><p>Creamed spinach, garlic tadka</p></div><div class="price">₹270</div></div>
-            <div class="item"><span class="dot"></span><div><h4>Paneer Tikka Masala</h4><p>Tandoor‑roasted paneer in gravy</p></div><div class="price">₹290</div></div>
-            <div class="item"><span class="dot"></span><div><h4>Veg Kolhapuri</h4><p>Spicy coconut‑based curry</p></div><div class="price
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="heritage-note">
+                🏰 Each dish is named after Maharashtra's historic forts and cities, celebrating our rich Maratha heritage 🚩
+            </div>
+
+            <div class="menu-category">
+                <h3>⚔️ Appetizers (Yodha Prarambh)</h3>
+                <div class="menu-grid">
+                    <div class="menu-item"><h4>Mavala Paneer Tikka</h4><p class="price">₹249</p><p>Cottage cheese cubes marinated in royal spices, grilled to perfection</p></div>
+                    <div class="menu-item"><h4>Pratapgad Spring Rolls</h4><p class="price">₹199</p><p>Crispy vegetable spring rolls with tangy tamarind chutney</p></div>
+                    <div class="menu-item"><h4>Raigad Spinach Dip</h4><p class="price">₹229</p><p>Creamy spinach and artichoke dip with warm garlic bread</p></div>
+                    <div class="menu-item"><h4>Sinhagad Samosa Platter</h4><p class="price">₹179</p><p>Golden fried samosas with mint and tamarind chutney</p></div>
+                    <div class="menu-item"><h4>Torna Fort Pakoda</h4><p class="price">₹159</p><p>Crispy mixed vegetable fritters with spicy green chutney</p></div>
+                    <div class="menu-item"><h4>Kondana Corn Fritters</h4><p class="price">₹189</p><p>Sweet corn and cheese fritters with spicy mayo</p></div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>🏰 Main Courses (Rajwada Thali)</h3>
+                <div class="menu-grid">
+                    <div class="menu-item"><h4>Rajgad Palak Paneer</h4><p class="price">₹299</p><p>Cottage cheese cubes in creamy spinach gravy with aromatic spices</p></div>
+                    <div class="menu-item"><h4>Chhatrapati Paneer Butter Masala</h4><p class="price">₹329</p><p>Rich and creamy tomato-based curry with soft paneer</p></div>
+                    <div class="menu-item"><h4>Swarajya Veg Biryani</h4><p class="price">₹279</p><p>Fragrant basmati rice with mixed vegetables and aromatic spices</p></div>
+                    <div class="menu-item"><h4>Hindavi Dal Makhani</h4><p class="price">₹249</p><p>Black lentils slow-cooked in butter and cream overnight</p></div>
+                    <div class="menu-item"><h4>Panhala Mix Veg Curry</h4><p class="price">₹269</p><p>Seasonal vegetables in traditional Maharashtrian gravy</p></div>
+                    <div class="menu-item"><h4>Shivneri Royal Thali</h4><p class="price">₹399</p><p>Complete platter with dal, vegetables, rice, roti, raita, and pickle</p></div>
+                    <div class="menu-item"><h4>Vijaydurg Dal Tadka</h4><p class="price">₹219</p><p>Yellow lentils tempered with ghee and aromatic cumin</p></div>
+                    <div class="menu-item"><h4>Kolhapur Misal Pav</h4><p class="price">₹189</p><p>Spicy sprout curry with butter-toasted pav bread</p></div>
+                    <div class="menu-item"><h4>Lohagad Dum Aloo</h4><p class="price">₹259</p><p>Baby potatoes in rich cashew and tomato gravy</p></div>
+                    <div class="menu-item"><h4>Purandar Malai Kofta</h4><p class="price">₹309</p><p>Vegetable dumplings in creamy cashew gravy</p></div>
+                    <div class="menu-item"><h4>Rajmachi Chole Bhature</h4><p class="price">₹229</p><p>Spiced chickpeas with fluffy fried bread</p></div>
+                    <div class="menu-item"><h4>Vasai Veg Kadhai</h4><p class="price">₹279</p><p>Mixed vegetables in spicy tomato-onion gravy</p></div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>🌾 Breads & Rice</h3>
+                <div class="menu-grid">
+                    <div class="menu-item"><h4>Sajjangad Naan</h4><p class="price">₹49</p><p>Traditional tandoor-baked flatbread</p></div>
+                    <div class="menu-item"><h4>Daulatabad Butter Roti</h4><p class="price">₹39</p><p>Whole wheat flatbread with ghee</p></div>
+                    <div class="menu-item"><h4>Murud Garlic Kulcha</h4><p class="price">₹69</p><p>Stuffed bread with garlic and herbs</p></div>
+                    <div class="menu-item"><h4>Swarajya Jeera Rice</h4><p class="price">₹129</p><p>Cumin-flavored basmati rice</p></div>
+                    <div class="menu-item"><h4>Rohida Pulao</h4><p class="price">₹159</p><p>Aromatic vegetable rice with cashews</p></div>
+                    <div
