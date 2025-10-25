@@ -3,156 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Swarajya Kitchen - Pure Vegetarian Restaurant celebrating Maharashtra's heritage">
-    <title>Swarajya Kitchen - Pure Vegetarian Heritage Dining</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --primary-color: #ff6b35; --secondary-color: #f7931e; --dark-color: #2c3e50;
-            --light-color: #ecf0f1; --white: #ffffff; --saffron: #ff9933;
-        }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--dark-color); }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        nav { background: var(--dark-color); color: var(--white); padding: 1rem 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        nav .container { display: flex; justify-content: space-between; align-items: center; }
-        nav h1 { font-size: 1.8rem; color: var(--saffron); }
-        nav ul { display: flex; list-style: none; gap: 2rem; }
-        nav a { color: var(--white); text-decoration: none; transition: color 0.3s; }
-        nav a:hover { color: var(--saffron); }
-        .hero { background: linear-gradient(135deg, var(--saffron) 0%, var(--secondary-color) 100%); color: var(--white); padding: 100px 0; text-align: center; }
-        .hero h2 { font-size: 3rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
-        .hero p { font-size: 1.3rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
-        .btn { display: inline-block; padding: 12px 30px; background: var(--white); color: var(--primary-color); text-decoration: none; border-radius: 5px; font-weight: bold; transition: transform 0.3s; }
-        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-        section { padding: 60px 0; }
-        section h2 { text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: var(--saffron); }
-        section h3 { font-size: 1.8rem; margin: 2rem 0 1rem; color: var(--primary-color); border-bottom: 3px solid var(--saffron); padding-bottom: 10px; }
-        .about { background: var(--light-color); }
-        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-top: 2rem; }
-        .about-text p { margin-bottom: 1rem; font-size: 1.1rem; line-height: 1.8; }
-        .about-image { text-align: center; }
-        .about-image img { max-width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
-        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        .menu-item { background: var(--white); padding: 1.5rem; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); transition: transform 0.3s; }
-        .menu-item:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(255, 107, 53, 0.2); }
-        .menu-item h4 { color: var(--saffron); font-size: 1.3rem; margin-bottom: 0.5rem; }
-        .menu-item .price { color: var(--primary-color); font-weight: bold; font-size: 1.2rem; margin-bottom: 0.5rem; }
-        .menu-item p { color: #666; font-size: 0.95rem; }
-        .menu-category { margin-bottom: 3rem; }
-        .heritage-note { background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%); padding: 20px; border-radius: 10px; border-left: 5px solid var(--saffron); margin: 2rem 0; text-align: center; font-style: italic; color: #8B4513; }
-        .gallery { background: var(--light-color); }
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-        .gallery-item { position: relative; overflow: hidden; border-radius: 10px; height: 250px; background: #ddd; }
-        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
-        .gallery-item:hover img { transform: scale(1.1); }
-        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem; }
-        .contact-info { display: grid; gap: 1.5rem; }
-        .contact-info div { background: var(--light-color); padding: 1.5rem; border-radius: 10px; }
-        .contact-info h3 { color: var(--saffron); font-size: 1.3rem; margin-bottom: 0.5rem; border: none; padding: 0; }
-        .contact-form { background: var(--light-color); padding: 2rem; border-radius: 10px; }
-        .form-group { margin-bottom: 1.5rem; }
-        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
-        .form-group input, .form-group textarea { width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px; font-size: 1rem; transition: border-color 0.3s; }
-        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--saffron); }
-        .form-group textarea { resize: vertical; min-height: 120px; }
-        button[type="submit"] { width: 100%; padding: 12px; background: var(--saffron); color: var(--white); border: none; border-radius: 5px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: background 0.3s; }
-        button[type="submit"]:hover { background: var(--primary-color); }
-        footer { background: var(--dark-color); color: var(--white); text-align: center; padding: 2rem 0; }
-        footer p { margin: 0.5rem 0; }
-        .footer-tagline { color: var(--saffron); font-style: italic; margin-top: 1rem; }
-        @media (max-width: 768px) {
-            nav ul { gap: 1rem; font-size: 0.9rem; }
-            .hero h2 { font-size: 2rem; }
-            .hero p { font-size: 1rem; }
-            .about-content, .contact-grid { grid-template-columns: 1fr; }
-            section h2 { font-size: 2rem; }
-            .menu-grid { grid-template-columns: 1fr; }
-        }
-        html { scroll-behavior: smooth; }
-    </style>
+    <title>Swarajya Kitchen - Pure Vegetarian Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <div class="container">
-            <h1>🚩 Swarajya Kitchen</h1>
+
+    <header>
+        <h1>🍽️ SWARAJYA KITCHEN</h1>
+        <p class="subtitle">Pure Vegetarian Menu</p>
+    </header>
+
+    <main class="menu-container">
+
+        <section class="menu-section">
+            <h2>⚔️ Appetizers (Yodha Prarambh - Warrior's Beginning)</h2>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <h3>Mavala Paneer Tikka</h3>
+                    <p>Cottage cheese cubes marinated in royal spices</p>
+                </li>
+                <li>
+                    <h3>Pratapgad Spring Rolls</h3>
+                    <p>Crispy vegetable spring rolls with tamarind chutney</p>
+                </li>
+                <li>
+                    <h3>Raigad Spinach Dip</h3>
+                    <p>Creamy spinach and artichoke dip with garlic bread</p>
+                </li>
+                <li>
+                    <h3>Sinhagad Samosa Platter</h3>
+                    <p>Golden fried samosas with mint and tamarind chutney</p>
+                </li>
+                <li>
+                    <h3>Torna Fort Pakoda</h3>
+                    <p>Crispy mixed vegetable fritters</p>
+                </li>
+                <li>
+                    <h3>Kondana Corn Fritters</h3>
+                    <p>Sweet corn and cheese fritters with spicy mayo</p>
+                </li>
             </ul>
-        </div>
-    </nav>
+        </section>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <h2>Welcome to Swarajya Kitchen</h2>
-            <p>Experience authentic pure vegetarian cuisine inspired by Maharashtra's glorious heritage</p>
-            <a href="#menu" class="btn">View Our Menu</a>
-        </div>
-    </section>
+        <section class="menu-section">
+            <h2>🏰 Main Courses (Rajwada Thali - Royal Feast)</h2>
+            <ul>
+                <li>
+                    <h3>Rajgad Palak Paneer</h3>
+                    <p>Cottage cheese in creamy spinach gravy</p>
+                </li>
+                <li>
+                    <h3>Chhatrapati Paneer Butter Masala</h3>
+                    <p>Rich and creamy tomato-based curry</p>
+                </li>
+                <li>
+                    <h3>Swarajya Veg Biryani</h3>
+                    <p>Fragrant basmati rice with mixed vegetables and spices</p>
+                </li>
+                <li>
+                    <h3>Hindavi Dal Makhani</h3>
+                    <p>Black lentils slow-cooked in butter and cream</p>
+                </li>
+                <li>
+                    <h3>Panhala Mix Veg Curry</h3>
+                    <p>Seasonal vegetables in traditional Maharashtrian gravy</p>
+                </li>
+                <li>
+                    <h3>Shivneri Royal Thali</h3>
+                    <p>Complete platter with dal, vegetables, rice, roti, and pickle</p>
+                </li>
+                <li>
+                    <h3>Vijaydurg Dal Tadka</h3>
+                    <p>Yellow lentils tempered with ghee and cumin</p>
+                </li>
+                <li>
+                    <h3>Kolhapur Misal Pav</h3>
+                    <p>Spicy sprout curry with butter-toasted pav</p>
+                </li>
+                <li>
+                    <h3>Lohagad Dum Aloo</h3>
+                    <p>Baby potatoes in rich cashew and tomato gravy</p>
+                </li>
+                <li>
+                    <h3>Purandar Malai Kofta</h3>
+                    <p>Vegetable dumplings in creamy gravy</p>
+                </li>
+                <li>
+                    <h3>Rajmachi Chole Bhature</h3>
+                    <p>Spiced chickpeas with fluffy fried bread</p>
+                </li>
+                <li>
+                    <h3>Vasai Veg Kadhai</h3>
+                    <p>Mixed vegetables in spicy tomato-onion gravy</p>
+                </li>
+            </ul>
+        </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2>Our Heritage</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p><strong>Swarajya Kitchen</strong> celebrates the rich culinary traditions of Maharashtra. Inspired by the valor of Maratha warriors and the bounty of our land, we serve pure vegetarian dishes named after historic forts and regions.</p>
-                    <p>Each dish tells a story of our glorious past while delighting your taste buds with authentic flavors and the finest ingredients, sourced locally whenever possible.</p>
-                    <p>Our experienced chefs combine traditional recipes with modern techniques to bring you an unforgettable dining experience that honors our heritage while embracing contemporary tastes.</p>
-                    <p><em>🌱 100% Pure Vegetarian • 🏰 Heritage Inspired • 🎨 Cultural Pride</em></p>
-                </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=500" alt="Restaurant Interior">
-                </div>
-            </div>
-        </div>
-    </section>
+        <section class="menu-section">
+            <h2>🌾 Breads & Rice (Anna - Grains)</h2>
+            <ul>
+                <li>
+                    <h3>Sajjangad Naan</h3>
+                    <p>Traditional tandoor-baked flatbread</p>
+                </li>
+                <li>
+                    <h3>Daulatabad Butter Roti</h3>
+                    <p>Whole wheat flatbread with ghee</p>
+                </li>
+                <li>
+                    <h3>Murud Garlic Kulcha</h3>
+                    <p>Stuffed bread with garlic and herbs</p>
+                </li>
+                <li>
+                    <h3>Swarajya Jeera Rice</h3>
+                    <p>Cumin-flavored basmati rice</p>
+                </li>
+                <li>
+                    <h3>Rohida Pulao</h3>
+                    <p>Aromatic vegetable rice</p>
+                </li>
+                <li>
+                    <h3>Panhala Stuffed Paratha</h3>
+                    <p>Flatbread stuffed with spiced potatoes</p>
+                </li>
+            </ul>
+        </section>
 
-    <section id="menu" class="menu">
-        <div class="container">
-            <h2>Our Menu</h2>
-            <div class="heritage-note">
-                🏰 Each dish is named after Maharashtra's historic forts and cities, celebrating our rich Maratha heritage 🚩
-            </div>
+        <section class="menu-section">
+            <h2>🥗 Salads & Sides (Sahayak Padaarth)</h2>
+            <ul>
+                <li>
+                    <h3>Pratapgad Fresh Garden Salad</h3>
+                    <p>Seasonal greens with lemon dressing</p>
+                </li>
+                <li>
+                    <h3>Mahuli Cucumber Raita</h3>
+                    <p>Cool yogurt with cucumber and spices</p>
+                </li>
+                <li>
+                    <h3>Sindhudurg Papad</h3>
+                    <p>Crispy lentil crackers</p>
+                </li>
+                <li>
+                    <h3>Satara Pickles</h3>
+                    <p>Traditional Maharashtrian pickles</p>
+                </li>
+                <li>
+                    <h3>Karnala Onion Rings</h3>
+                    <p>Crispy battered onion rings</p>
+                </li>
+            </ul>
+        </section>
 
-            <div class="menu-category">
-                <h3>⚔️ Appetizers (Yodha Prarambh)</h3>
-                <div class="menu-grid">
-                    <div class="menu-item"><h4>Mavala Paneer Tikka</h4><p class="price">₹249</p><p>Cottage cheese cubes marinated in royal spices, grilled to perfection</p></div>
-                    <div class="menu-item"><h4>Pratapgad Spring Rolls</h4><p class="price">₹199</p><p>Crispy vegetable spring rolls with tangy tamarind chutney</p></div>
-                    <div class="menu-item"><h4>Raigad Spinach Dip</h4><p class="price">₹229</p><p>Creamy spinach and artichoke dip with warm garlic bread</p></div>
-                    <div class="menu-item"><h4>Sinhagad Samosa Platter</h4><p class="price">₹179</p><p>Golden fried samosas with mint and tamarind chutney</p></div>
-                    <div class="menu-item"><h4>Torna Fort Pakoda</h4><p class="price">₹159</p><p>Crispy mixed vegetable fritters with spicy green chutney</p></div>
-                    <div class="menu-item"><h4>Kondana Corn Fritters</h4><p class="price">₹189</p><p>Sweet corn and cheese fritters with spicy mayo</p></div>
-                </div>
-            </div>
+        <section class="menu-section">
+            <h2>🍰 Desserts (Rajwada Mithai - Royal Sweets)</h2>
+            <ul>
+                <li>
+                    <h3>Konkan Shrikhand</h3>
+                    <p>Saffron-flavored sweet yogurt</p>
+                </li>
+                <li>
+                    <h3>Raigad Puran Poli</h3>
+                    <p>Sweet flatbread stuffed with jaggery and lentils</p>
+                </li>
+                <li>
+                    <h3>Mahad Gulab Jamun</h3>
+                    <p>Soft milk dumplings in rose syrup</p>
+                </li>
+                <li>
+                    <h3>Wai Kulfi</h3>
+                    <p>Traditional Indian ice cream with pistachios</p>
+                </li>
+                <li>
+                    <h3>Ganpati Modak</h3>
+                    <p>Sweet coconut and jaggery dumplings</p>
+                </li>
+                <li>
+                    <h3>Pune Aamras Puri</h3>
+                    <p>Sweet mango puree with fried bread</p>
+                </li>
+                <li>
+                    <h3>Nashik Basundi</h3>
+                    <p>Thickened sweetened milk with nuts</p>
+                </li>
+                <li>
+                    <h3>Baramati Jalebi</h3>
+                    <p>Crispy sweet spirals in sugar syrup</p>
+                </li>
+                <li>
+                    <h3>Ahmednagar Kheer</h3>
+                    <p>Rice pudding with cardamom and nuts</p>
+                </li>
+            </ul>
+        </section>
 
-            <div class="menu-category">
-                <h3>🏰 Main Courses (Rajwada Thali)</h3>
-                <div class="menu-grid">
-                    <div class="menu-item"><h4>Rajgad Palak Paneer</h4><p class="price">₹299</p><p>Cottage cheese cubes in creamy spinach gravy with aromatic spices</p></div>
-                    <div class="menu-item"><h4>Chhatrapati Paneer Butter Masala</h4><p class="price">₹329</p><p>Rich and creamy tomato-based curry with soft paneer</p></div>
-                    <div class="menu-item"><h4>Swarajya Veg Biryani</h4><p class="price">₹279</p><p>Fragrant basmati rice with mixed vegetables and aromatic spices</p></div>
-                    <div class="menu-item"><h4>Hindavi Dal Makhani</h4><p class="price">₹249</p><p>Black lentils slow-cooked in butter and cream overnight</p></div>
-                    <div class="menu-item"><h4>Panhala Mix Veg Curry</h4><p class="price">₹269</p><p>Seasonal vegetables in traditional Maharashtrian gravy</p></div>
-                    <div class="menu-item"><h4>Shivneri Royal Thali</h4><p class="price">₹399</p><p>Complete platter with dal, vegetables, rice, roti, raita, and pickle</p></div>
-                    <div class="menu-item"><h4>Vijaydurg Dal Tadka</h4><p class="price">₹219</p><p>Yellow lentils tempered with ghee and aromatic cumin</p></div>
-                    <div class="menu-item"><h4>Kolhapur Misal Pav</h4><p class="price">₹189</p><p>Spicy sprout curry with butter-toasted pav bread</p></div>
-                    <div class="menu-item"><h4>Lohagad Dum Aloo</h4><p class="price">₹259</p><p>Baby potatoes in rich cashew and tomato gravy</p></div>
-                    <div class="menu-item"><h4>Purandar Malai Kofta</h4><p class="price">₹309</p><p>Vegetable dumplings in creamy cashew gravy</p></div>
-                    <div class="menu-item"><h4>Rajmachi Chole Bhature</h4><p class="price">₹229</p><p>Spiced chickpeas with fluffy fried bread</p></div>
-                    <div class="menu-item"><h4>Vasai Veg Kadhai</h4><p class="price">₹279</p><p>Mixed vegetables in spicy tomato-onion gravy</p></div>
-                </div>
-            </div>
+        <section class="menu-section">
+            <h2>☕ Beverages (Pey Padaarth)</h2>
+            <ul>
+                <li>
+                    <h3>Koyna Masala Chai</h3>
+                    <p>Traditional Indian spiced tea</p>
+                </li>
+                <li>
+                    <h3>Ratnagiri Rose Sherbet</h3>
+                    <p>Refreshing rose-flavored drink</p>
+                </li>
+                <li>
+                    <h3>Sangli Sugarcane Juice</h3>
+                    <p>Fresh pressed sugarcane juice</p>
+                </li>
+                <li>
+                    <h3>Solapur Saffron Lassi</h3>
+                    <p>Creamy yogurt drink with saffron</p>
+                </li>
+                <li>
+                    <h3>Karad Jaggery Coffee</h3>
+                    <p>Traditional filter coffee with jaggery</p>
+                </li>
+                <li>
+                    <h3>Malvan Kokum Sharbat</h3>
+                    <p>Cooling kokum fruit drink</p>
+                </li>
+                <li>
+                    <h3>Devgad Aam Panna</h3>
+                    <p>Raw mango summer cooler</p>
+                </li>
+                <li>
+                    <h3>Aurangabad Thandai</h3>
+                    <p>Cold milk drink with nuts and spices</p>
+                </li>
+            </ul>
+        </section>
 
-            <div class="menu-category">
-                <h3>🌾 Breads & Rice</h3>
-                <div class="menu-grid">
-                    <div class="menu-item"><h4>Sajjangad Naan</h4><p class="price">₹49</p><p>Traditional tandoor-baked flatbread</p></div>
-                    <div class="menu-item"><h4>Daulatabad Butter Roti</h4><p class="price">₹39</p><p>Whole wheat flatbread with ghee</p></div>
-                    <div class="menu-item"><h4>Murud Garlic Kulcha</h4><p class="price">₹69</p><p>Stuffed bread with garlic and herbs</p></div>
-                    <div class="menu-item"><h4>Swarajya Jeera Rice</h4><p class="price">₹129</p><p>Cumin-flavored basmati rice</p></div>
-                    <div class="menu-item"><h4>Rohida Pulao</h4><p class="price">₹159</p><p>Aromatic vegetable rice with cashews</p></div>
-                    <div
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Swarajya Kitchen. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
