@@ -1,17 +1,19 @@
-# 🍽️ SnW Restaurant Website
+# 🚩 Swarajya Kitchen
 
-A modern, responsive restaurant website built using **HTML** and **CSS**.  
-This project showcases a clean layout, easy navigation, and a focus on food presentation — designed to provide a smooth browsing experience for customers.
+A modern, responsive **pure vegetarian restaurant website** celebrating Maharashtra's rich heritage. Built using **HTML** and **CSS** with a Maratha-themed menu where every dish is named after historic forts and cities.
+
+This project showcases a clean layout, easy navigation, and cultural storytelling through food — designed to provide a memorable browsing and dining experience.
 
 ---
 
 ## ✨ Features
 
+- **Heritage Theme** – Every dish named after Maharashtra's historic forts and cities
+- **Pure Vegetarian** – 100% vegetarian menu with traditional and modern dishes
 - **Responsive Design** – Optimized for all devices (mobile, tablet, desktop)
-- **Menu Page** – Showcase delicious dishes with appealing visuals
-- **About Section** – Tell your restaurant's story
-- **Contact Information** – Easy ways for customers to reach you
+- **Cultural Storytelling** – Each dish connects to Maratha history
 - **Clean UI/UX** – Intuitive navigation and modern aesthetics
+- **Educational Experience** – Learn about Maharashtra's geography and heritage
 
 ---
 
@@ -19,6 +21,24 @@ This project showcases a clean layout, easy navigation, and a focus on food pres
 
 - **HTML5** – Structure and semantic content  
 - **CSS3** – Styling, layout, animations, and responsiveness  
+
+---
+
+## 🏰 Theme Concept
+
+**Swarajya** (Self-rule) represents the foundation of the Maratha Empire. This restaurant celebrates:
+
+- 🏰 **37 unique fort and city names** from Maharashtra
+- 🌱 **Pure vegetarian cuisine** honoring traditional values
+- 📖 **Historical storytelling** through dish names
+- 🎨 **Cultural pride** in Marathi heritage
+
+### Menu Categories:
+- **Appetizers** (Yodha Prarambh - Warrior's Beginning)
+- **Main Courses** (Rajwada Thali - Royal Feast)
+- **Breads & Rice** (Anna - Grains)
+- **Desserts** (Rajwada Mithai - Royal Sweets)
+- **Beverages** (Pey Padaarth)
 
 ---
 
@@ -34,11 +54,15 @@ This project showcases a clean layout, easy navigation, and a focus on food pres
    ```
 3. Open `index.html` in your web browser.
 
+**Live Demo:** [Swarajya Kitchen](https://surajpatil1404.github.io/SnW-Restaurant-site/)
+
 ---
 
 ## 📸 Preview
 
-*(Add a screenshot or GIF of your website here)*
+![Swarajya Kitchen Website](screenshots/preview.png)
+
+*Visit the live site to experience Maharashtra's heritage through food!*
 
 ---
 
@@ -64,3 +88,5 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 ⭐ **Star this repo if you found it helpful!**
+
+🚩 **Jai Maharashtra!**
