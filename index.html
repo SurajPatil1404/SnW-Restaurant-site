@@ -1,39 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swarajya Kitchen - Authentic Vegetarian Cuisine</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
-    
-    <!-- Link to external CSS -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swarajya Kitchen - Authentic Vegetarian Cuisine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- HEADER & NAVIGATION -->
-    <header class="main-header">
-        <div class="container">
-            <a href="#" class="logo">🍽️ Swarajya Kitchen</a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#contact">Visit Us</a></li>
-                </ul>
-            </nav>
+  <header class="main-header">
+    <div class="container">
+      <a href="#home" class="logo" aria-label="Swarajya Kitchen logo">🍽️ Swarajya Kitchen</a>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#visit">Visit Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <h1>Swarajya Kitchen</h1>
+      <p>Experience the authentic taste of pure vegetarian Maratha heritage.</p>
+      <a href="#menu" class="btn">View Our Royal Menu</a>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <h2>About Our Heritage</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <h3>A Journey Through Maratha Culinary Traditions</h3>
+          <p>Welcome to Swarajya Kitchen, where we celebrate the rich vegetarian culinary heritage of the Maratha Empire. Our restaurant brings you authentic recipes passed down through generations, honoring the self-reliant spirit of "Swarajya"—self-rule and independence.</p>
+          <p>Every dish tells a story of valor, tradition, and the simple yet profound vegetarian lifestyle that sustained warriors and royalty alike. We use traditional cooking methods, authentic spices, and time-honored recipes to recreate the flavors that once graced the tables of Maratha courts.</p>
+          <p>Our commitment to pure vegetarian cuisine reflects the cultural values and dietary practices that have been integral to Maratha heritage for centuries.</p>
         </div>
-    </header>
+        <div class="about-image" aria-hidden="true">
+          <img src="placeholder-heritage.jpg" alt="Illustration of Maratha vegetarian heritage" />
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- HERO SECTION -->
-    <section class="hero" id="home">
-        <h1>Swarajya Kitchen</h1>
-        <p>Experience the authentic taste of pure vegetarian Maratha heritage.</p>
-        <a href="#menu" class="btn">View Our Royal Menu</a>
-    </section>
+  <section class="menu" id="menu">
+    <div class="container">
+      <h2>Our Royal Menu</h2>
+      <p class="menu-subtitle">Authentic Vegetarian Delicacies from Maratha Tradition</p>
 
+      <div class="menu-category">
+        <h3>🌾 Traditional Breads</h3>
+        <div class="menu-items">
+          <article class="menu-item">
+            <header>
+              <h4>Bhakri</h4>
+              <span class="price">₹40</span>
+            </header>
+            <p>Traditional flatbread made from jowar or bajra, a staple of Maratha cuisine.</p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h4>Puran Poli</h4>
+              <span class="price">₹80</span>
+            </header>
+            <p>Sweet flatbread stuffed with lentil and jaggery filling, a festive favorite.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="menu-category">
+        <h3>🍲 Main Courses</h3>
+        <div class="menu-items">
+          <article class="menu-item">
+            <header>
+              <h4>Zunka Bhakar</h4>
+              <span class="price">₹120</span>
+            </header>
+            <p>Spicy gram flour curry served with millet bread, a warrior's meal.</p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h4>Bharli Vangi</h4>
+              <span class="price">₹150</span>
+            </header>
+            <p>Stuffed eggplant cooked in authentic Maharashtrian spices.</p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h4>Amti Dal</h4>
+              <span class="price">₹100</span>
+            </header>
+            <p>Traditional lentil curry with kokum and jaggery, sweet and tangy.</p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h4>Varan Bhaat</h4>
+              <span class="price">₹110</span>
+            </header>
+            <p>Simple yet flavorful dal rice with ghee, comfort food at its best.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="menu-category">
+        <h3>🥗 Sides &amp; Accompaniments</h3>
+        <div class="menu-items">
+          <article class="menu-item">
+            <header>
+              <h4>Koshimbir</h4>
+              <span class="price">₹60</span>
+            </header>
+            <p>Fresh vegetable salad with peanuts and coconut.</p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h4>Thecha</h4>
+              <span class="price">₹30</span>
+            </header>
+            <p>Fiery green chili chutney, a traditional condiment.</p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h4>Lonche (Pickle)</h4>
+              <span class="price">₹40</span>
+            </header>
+            <p>Assorted traditional pickles prepared with authentic spices.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="menu-category">
+        <h3>🍮 Desserts</h3>
+        <div class="menu-items">
+          <article class="menu-item">
+            <header>
+              <h4>Shrikhand</h4>
+              <span class="price">₹90</span>
+            </header>
+            <p>Creamy sweetened yogurt flavored with saffron and cardamom.</p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h4>Modak</h4>
+              <span class="price">₹70</span>
+            </header>
+            <p>Steamed dumplings with coconut and jaggery filling.</p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h4>Basundi</h4>
+              <span class="price">₹100</span>
+            </header>
+            <p>Rich thickened milk dessert with dry fruits.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="menu-category">
+        <h3>☕ Beverages</h3>
+        <div class="menu-items">
+          <article class="menu-item">
+            <header>
+              <h4>Masala Chai</h4>
+              <span class="price">₹30</span>
+            </header>
+            <p>Traditional spiced tea brewed to perfection.</p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h4>Kokum Sharbat</h4>
+              <span class="price">₹50</span>
+            </header>
+            <p>Refreshing drink made from kokum fruit.</p>
+          </article>
+          <article class="menu-item">
+            <header>
+              <h4>Sol Kadhi</h4>
+              <span class="price">₹60</span>
+            </header>
+            <p>Coconut milk and kokum digestive drink.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="container">
+      <h2>Visit Us</h2>
+      <div class="visit-content">
+        <div class="visit-info">
+          <h3>Location</h3>
+          <p>📍 123 Heritage Lane<br />Shivaji Nagar, Pune<br />Maharashtra 411016</p>
+
+          <h3>Hours</h3>
+          <p>⏰ Monday - Sunday<br />11:00 AM - 10:00 PM</p>
+
+          <h3>Contact</h3>
+          <p>📞 +91 98765 43210<br />✉️ info@swarajyakitchen.com</p>
+
+          <h3>Reservations</h3>
+          <p>Book your table in advance to experience our royal vegetarian feast. Walk-ins are also welcome!</p>
+        </div>
+        <div class="visit-map" aria-label="Map placeholder">
+          <div class="map-placeholder">
+            <p>[Map Integration - Google Maps Embed]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-about">
+          <h3>Swarajya Kitchen</h3>
+          <p>Preserving Maratha vegetarian culinary heritage, one dish at a time.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#visit">Visit Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Connect With Us</h4>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook">📘 Facebook</a>
+            <a href="#" class="social-icon" aria-label="Instagram">📷 Instagram</a>
+            <a href="#" class="social-icon" aria-label="Twitter">🐦 Twitter</a>
+            <a href="#" class="social-icon" aria-label="YouTube">📹 YouTube</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Swarajya Kitchen. All rights reserved. | Celebrating Maratha Vegetarian Heritage</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
