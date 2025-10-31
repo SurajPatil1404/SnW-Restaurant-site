@@ -1,13 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Swarajya Kitchen - Authentic Vegetarian Cuisine</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    :root{ --bg:#0f1115; --card:#171a21; --muted:#a9b1c3; --text:#e7ebf3; --accent:#e6b325; --pill:#243044; --border:#262b36; }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif}
+    h1,h2,h3{font-family:"Playfair Display",serif;margin:0 0 .5rem}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1100px,92%);margin-inline:auto}
+    .main-header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg, rgba(15,17,21,.95), rgba(15,17,21,.75) 70%, rgba(15,17,21,0));backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--border)}
+    .main-header .container{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .logo{font-weight:700}
+    .main-nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    .main-nav a{padding:8px 12px;border-radius:999px;background:var(--pill);color:var(--text)}
+    .hero{padding:64px 0;background:radial-gradient(1200px 500px at 10% -10%, #1e2533, transparent 60%), radial-gradient(1000px 400px at 110% 0%, #2b1f1a, transparent 60%)}
+    .hero .btn{display:inline-block;margin-top:14px;background:var(--accent);color:#1b1207;padding:12px 18px;border-radius:10px;font-weight:700}
+    .about{padding:48px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    #menu{padding:56px 0}
+    #menu .section-intro{max-width:760px;margin:0 auto 28px;text-align:center;color:var(--muted)}
+    .menu-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .menu-card{grid-column:span 12;background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .menu-card-header{display:flex;align-items:center;gap:16px;padding:16px;border-bottom:1px solid var(--border);background:linear-gradient(180deg, #1a1f2a, #151922)}
+    .menu-card-header img{width:72px;height:72px;object-fit:cover;border-radius:12px;border:1px solid var(--border)}
+    .menu-card-header .title{display:flex;flex-direction:column}
+    .menu-card-header .title h3{font-size:1.25rem}
+    .menu-card-header .eyebrow{font-size:.85rem;color:var(--muted)}
+    .items{display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:14px;padding:16px}
+    .item{display:flex;gap:12px;padding:12px;border:1px solid var(--border);border-radius:12px;background:#131720}
+    .item .thumb{flex:0 0 72px;width:72px;height:72px;border-radius:10px;object-fit:cover;border:1px solid var(--border)}
+    .item .meta b{display:block;color:#fff}
+    .item .meta p{margin:.25rem 0 0;color:var(--muted);font-size:.95rem}
+    .appetizers .menu-card-header{background:linear-gradient(180deg,#23262e,#1a1d24)}
+    .mains .menu-card-header{background:linear-gradient(180deg,#2a2220,#1b1715)}
+    .breads .menu-card-header{background:linear-gradient(180deg,#23241c,#181910)}
+    .sides .menu-card-header{background:linear-gradient(180deg,#1e2624,#141b1a)}
+    .desserts .menu-card-header{background:linear-gradient(180deg,#241a24,#19131a)}
+    .beverages .menu-card-header{background:linear-gradient(180deg,#1a2028,#12161c)}
+    @media (min-width: 760px){ .menu-card{grid-column:span 6} }
+    @media (min-width: 1040px){ .menu-card{grid-column:span 4} }
+    @media (max-width: 560px){ .items{grid-template-columns:1fr} .main-nav ul{gap:10px} .menu-card-header img{width:64px;height:64px} }
+  </style>
 </head>
 <body>
   <header class="main-header">
@@ -22,6 +60,7 @@
       </nav>
     </div>
   </header>
+
   <section class="hero" id="home">
     <div class="container">
       <h1>Swarajya Kitchen</h1>
@@ -29,98 +68,71 @@
       <a href="#menu" class="btn">View Our Royal Menu</a>
     </div>
   </section>
+
   <section class="about" id="about">
     <div class="container">
       <h2>About Our Heritage</h2>
       <p>Swarajya Kitchen brings you the finest pure vegetarian cuisine inspired by the glorious Maratha Empire. Our dishes are crafted with authentic spices and traditional recipes passed down through generations.</p>
     </div>
   </section>
+
   <section id="menu">
-    <h2>🍽️ SWARAJYA KITCHEN - Pure Vegetarian Menu</h2>
-
-    <h3>⚔️ Appetizers (Yodha Prarambh - Warrior's Beginning)</h3>
-    <ul>
-        <li><b>Mavala Paneer Tikka</b> – Cottage cheese cubes marinated in royal spices</li>
-        <li><b>Pratapgad Spring Rolls</b> – Crispy vegetable spring rolls with tamarind chutney</li>
-        <li><b>Raigad Spinach Dip</b> – Creamy spinach and artichoke dip with garlic bread</li>
-        <li><b>Sinhagad Samosa Platter</b> – Golden fried samosas with mint and tamarind chutney</li>
-        <li><b>Torna Fort Pakoda</b> – Crispy mixed vegetable fritters</li>
-        <li><b>Kondana Corn Fritters</b> – Sweet corn and cheese fritters with spicy mayo</li>
-    </ul>
-
-    <h3>🏰 Main Courses (Rajwada Thali - Royal Feast)</h3>
-    <ul>
-        <li><b>Rajgad Palak Paneer</b> – Cottage cheese in creamy spinach gravy</li>
-        <li><b>Chhatrapati Paneer Butter Masala</b> – Rich and creamy tomato-based curry</li>
-        <li><b>Swarajya Veg Biryani</b> – Fragrant basmati rice with mixed vegetables and spices</li>
-        <li><b>Hindavi Dal Makhani</b> – Black lentils slow-cooked in butter and cream</li>
-        <li><b>Panhala Mix Veg Curry</b> – Seasonal vegetables in traditional Maharashtrian gravy</li>
-        <li><b>Shivneri Royal Thali</b> – Complete platter with dal, vegetables, rice, roti, and pickle</li>
-        <li><b>Vijaydurg Dal Tadka</b> – Yellow lentils tempered with ghee and cumin</li>
-        <li><b>Kolhapur Misal Pav</b> – Spicy sprout curry with butter-toasted pav</li>
-        <li><b>Lohagad Dum Aloo</b> – Baby potatoes in rich cashew and tomato gravy</li>
-        <li><b>Purandar Malai Kofta</b> – Vegetable dumplings in creamy gravy</li>
-        <li><b>Rajmachi Chole Bhature</b> – Spiced chickpeas with fluffy fried bread</li>
-        <li><b>Vasai Veg Kadhai</b> – Mixed vegetables in spicy tomato-onion gravy</li>
-    </ul>
-
-    <h3>🌾 Breads & Rice (Anna - Grains)</h3>
-    <ul>
-        <li><b>Sajjangad Naan</b> – Traditional tandoor-baked flatbread</li>
-        <li><b>Daulatabad Butter Roti</b> – Whole wheat flatbread with ghee</li>
-        <li><b>Murud Garlic Kulcha</b> – Stuffed bread with garlic and herbs</li>
-        <li><b>Swarajya Jeera Rice</b> – Cumin-flavored basmati rice</li>
-        <li><b>Rohida Pulao</b> – Aromatic vegetable rice</li>
-        <li><b>Panhala Stuffed Paratha</b> – Flatbread stuffed with spiced potatoes</li>
-    </ul>
-
-    <h3>🥗 Salads & Sides (Sahayak Padaarth)</h3>
-    <ul>
-        <li><b>Pratapgad Fresh Garden Salad</b> – Seasonal greens with lemon dressing</li>
-        <li><b>Mahuli Cucumber Raita</b> – Cool yogurt with cucumber and spices</li>
-        <li><b>Sindhudurg Papad</b> – Crispy lentil crackers</li>
-        <li><b>Satara Pickles</b> – Traditional Maharashtrian pickles</li>
-        <li><b>Karnala Onion Rings</b> – Crispy battered onion rings</li>
-    </ul>
-
-    <h3>🍰 Desserts (Rajwada Mithai - Royal Sweets)</h3>
-    <ul>
-        <li><b>Konkan Shrikhand</b> – Saffron-flavored sweet yogurt</li>
-        <li><b>Raigad Puran Poli</b> – Sweet flatbread stuffed with jaggery and lentils</li>
-        <li><b>Mahad Gulab Jamun</b> – Soft milk dumplings in rose syrup</li>
-        <li><b>Wai Kulfi</b> – Traditional Indian ice cream with pistachios</li>
-        <li><b>Ganpati Modak</b> – Sweet coconut and jaggery dumplings</li>
-        <li><b>Pune Aamras Puri</b> – Sweet mango puree with fried bread</li>
-        <li><b>Nashik Basundi</b> – Thickened sweetened milk with nuts</li>
-        <li><b>Baramati Jalebi</b> – Crispy sweet spirals in sugar syrup</li>
-        <li><b>Ahmednagar Kheer</b> – Rice pudding with cardamom and nuts</li>
-    </ul>
-
-    <h3>☕ Beverages (Pey Padaarth)</h3>
-    <ul>
-        <li><b>Koyna Masala Chai</b> – Traditional Indian spiced tea</li>
-        <li><b>Ratnagiri Rose Sherbet</b> – Refreshing rose-flavored drink</li>
-        <li><b>Sangli Sugarcane Juice</b> – Fresh pressed sugarcane juice</li>
-        <li><b>Solapur Saffron Lassi</b> – Creamy yogurt drink with saffron</li>
-        <li><b>Karad Jaggery Coffee</b> – Traditional filter coffee with jaggery</li>
-        <li><b>Malvan Kokum Sharbat</b> – Cooling kokum fruit drink</li>
-        <li><b>Devgad Aam Panna</b> – Raw mango summer cooler</li>
-        <li><b>Aurangabad Thandai</b> – Cold milk drink with nuts and spices</li>
-    </ul>
-  </section>
-  <section class="visit" id="visit">
     <div class="container">
-      <h2>Visit Us</h2>
-      <p><b>Location:</b> Fort Heritage District, Pune, Maharashtra</p>
-      <p><b>Hours:</b> Monday - Sunday: 11:00 AM - 10:00 PM</p>
-      <p><b>Contact:</b> +91 20 1234 5678</p>
-      <p>Experience the royal hospitality of Swarajya Kitchen. Reservations recommended for large groups.</p>
-    </div>
-  </section>
-  <footer class="main-footer">
-    <div class="container">
-      <p>&copy; 2025 Swarajya Kitchen. All rights reserved. | Pure Vegetarian Restaurant</p>
-    </div>
-  </footer>
-</body>
-</html>
+      <h2>🍽️ SWARAJYA KITCHEN - Pure Vegetarian Menu</h2>
+      <p class="section-intro">Explore our royal selection of dishes across categories. Each card showcases signature items with enticing images. All images are royalty-free placeholders from Unsplash or Pexels.</p>
+      <div class="menu-grid">
+        <!-- Appetizers -->
+        <article class="menu-card appetizers" aria-labelledby="appetizers-title">
+          <div class="menu-card-header">
+            <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?q=80&w=600&auto=format&fit=crop" alt="Appetizers assortment" />
+            <div class="title">
+              <h3 id="appetizers-title">⚔️ Appetizers</h3>
+              <span class="eyebrow">Yodha Prarambh - Warrior's Beginning</span>
+            </div>
+          </div>
+          <div class="items">
+            <div class="item"><img class="thumb" src="https://images.unsplash.com/photo-1604908812581-dc44c0f58b5e?q=80&w=400&auto=format&fit=crop" alt="Paneer tikka" /><div class="meta"><b>Mavala Paneer Tikka</b><p>Cottage cheese cubes marinated in royal spices.</p></div></div>
+            <div class="item"><img class="thumb" src="https://images.unsplash.com/photo-1562967914-608f82629710?q=80&w=400&auto=format&fit=crop" alt="Spring rolls" /><div class="meta"><b>Pratapgad Spring Rolls</b><p>Crispy vegetable rolls with tamarind chutney.</p></div></div>
+            <div class="item"><img class="thumb" src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=400&auto=format&fit=crop" alt="Spinach dip" /><div class="meta"><b>Raigad Spinach Dip</b><p>Creamy spinach-artichoke dip with garlic bread.</p></div></div>
+            <div class="item"><img class="thumb" src="https://images.unsplash.com/photo-1599487488170-d11ec9c172d6?q=80&w=400&auto=format&fit=crop" alt="Samosa platter" /><div class="meta"><b>Sinhagad Samosa Platter</b><p>Golden fried samosas with mint and tamarind chutney.</p></div></div>
+            <div class="item"><img class="thumb" src="https://images.unsplash.com/photo-1625944525604-8fbd0e64b6fc?q=80&w=400&auto=format&fit=crop" alt="Pakoda" /><div class="meta"><b>Torna Fort Pakoda</b><p>Crispy mixed vegetable fritters.</p></div></div>
+            <div class="item"><img class="thumb" src="https://images.unsplash.com/photo-1612923694179-2c1489f6b49f?q=80&w=400&auto=format&fit=crop" alt="Corn fritters" /><div class="meta"><b>Kondana Corn Fritters</b><p>Sweet corn and cheese fritters with spicy mayo.</p></div></div>
+          </div>
+        </article>
+
+        <!-- Main Courses -->
+        <article class="menu-card mains" aria-labelledby="mains-title">
+          <div class="menu-card-header">
+            <img src="https://images.unsplash.com/photo-1604908176997-4316c288032e?q=80&w=600&auto=format&fit=crop" alt="Main courses" />
+            <div class="title">
+              <h3 id="mains-title">🏰 Main Courses</h3>
+              <span class="eyebrow">Rajwada Thali - Royal Feast</span>
+            </div>
+          </div>
+          <div class="items">
+            <div class="item"><img class="thumb" src="https://images.unsplash.com/photo-1604908554029-806bb1e72f36?q=80&w=400&auto=format&fit=crop" alt="Palak paneer" /><div class="meta"><b>Rajgad Palak Paneer</b><p>Cottage cheese in creamy spinach gravy.</p></div></div>
+            <div class="item"><img class="thumb" src="https://images.unsplash.com/photo-1625944525539-94e2fcdfafad?q=80&w=400&auto=format&fit=crop" alt="Paneer butter masala" /><div class="meta"><b>Chhatrapati Paneer Butter Masala</b><p>Rich and creamy tomato-based curry.</p></div></div>
+            <div class="item"><img class="thumb" src="https://images.unsplash.com/photo-1604908177273-f5f2dc032d31?q=80&w=400&auto=format&fit=crop" alt="Veg biryani" /><div class="meta"><b>Swarajya Veg Biryani</b><p>Fragrant basmati rice with mixed vegetables and spices.</p></div></div>
+            <div class="item"><img class="thumb" src="https://images.unsplash.com/photo-1625944525218-0bdb0a2a6099?q=80&w=400&auto=format&fit=crop" alt="Dal makhani" /><div class="meta"><b>Hindavi Dal Makhani</b><p>Black lentils slow-cooked in butter and cream.</p></div></div>
+            <div class="item"><img class="thumb" src="https://images.unsplash.com/photo-1589308078057-918dc4b00f30?q=80&w=400&auto=format&fit=crop" alt="Mix veg curry" /><div class="meta"><b>Panhala Mix Veg Curry</b><p>Seasonal vegetables in traditional Maharashtrian gravy.</p></div></div>
+            <div class="item"><img class="thumb" src="https://images.unsplash.com/photo-1604908177035-9f2b0b7f7c3e?q=80&w=400&auto=format&fit=crop" alt="Royal thali" /><div class="meta"><b>Shivneri Royal Thali</b><p>Platter with dal, vegetables, rice, roti, and pickle.</p></div></div>
+            <div class="item"><img class="thumb" src="https://images.unsplash.com/photo-1625944525580-df3c0a3f2a59?q=80&w=400&auto=format&fit=crop" alt="Dal tadka" /><div class="meta"><b>Vijaydurg Dal Tadka</b><p>Yellow lentils tempered with ghee and cumin.</p></div></div>
+            <div class="item"><img class="thumb" src="https://images.unsplash.com/photo-1642271566730-7f4b5f8d0f0f?q=80&w=400&auto=format&fit=crop" alt="Misal pav" /><div class="meta"><b>Kolhapur Misal Pav</b><p>Spicy sprout curry with butter-toasted pav.</p></div></div>
+            <div class="item"><img class="thumb" src="https://images.unsplash.com/photo-1625944525678-2d4d3f6ad0a1?q=80&w=400&auto=format&fit=crop" alt="Dum aloo" /><div class="meta"><b>Lohagad Dum Aloo</b><p>Baby potatoes in rich cashew-tomato gravy.</p></div></div>
+          </div>
+        </article>
+
+        <!-- Breads & Rice -->
+        <article class="menu-card breads" aria-labelledby="breads-title">
+          <div class="menu-card-header">
+            <img src="https://images.unsplash.com/photo-1541599188778-cdc73298e8f8?q=80&w=600&auto=format&fit=crop" alt="Breads and rice" />
+            <div class="title">
+              <h3 id="breads-title">🥖 Breads & Rice</h3>
+              <span class="eyebrow">Anna-Bhakri - Staples of the Kingdom</span>
+            </div>
+          </div>
+          <div class="items">
+            <div class="item"><img class="thumb" src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=400&auto=format&fit=crop" alt="Butter roti" /><div class="meta"><b>Daulatabad Butter Roti</b><p>Whole wheat flatbread brushed with ghee.</p></div></div>
+            <div class="item"><img class="thumb" src="https://images.unsplash.com/photo-1605296867724-fa87a8ef53fd?q=80&w=400&auto=format&fit=crop" alt="Garlic kulcha" /><div class="meta"><b>Murud Garlic Kulcha</b><p>Stuffed bread with garlic and herbs.</p></div></div>
+            <div class="item"><img class="thumb" src="https://images.unsplash.com/photo-1604908177273-f5f2dc032d31?q=80&w=400&auto=format&fit=crop" alt="Jeera rice" /><div class="meta"><b>Swarajya Jeera Rice</b><p>Cumin-flavored basmati rice.</p></div></div>
+            <div class="item"><img class="thumb" src="https://images.unsplash.com/photo-1605478041512-36c8bda5aeff?q=80&w=400&auto=format&fit=crop" alt="Veg pulao" /><div class="meta"><b>Rohida Pulao</b
