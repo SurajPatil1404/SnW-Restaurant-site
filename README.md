@@ -1,92 +1,78 @@
-# 🚩 Swarajya Kitchen
+# ☕ Communion Cafe  
+**Community • Comfort • Cafe**
 
-A modern, responsive **pure vegetarian restaurant website** celebrating Maharashtra's rich heritage. Built using **HTML** and **CSS** with a Maratha-themed menu where every dish is named after historic forts and cities.
-
-This project showcases a clean layout, easy navigation, and cultural storytelling through food — designed to provide a memorable browsing and dining experience.
+A modern, responsive **cafe website** celebrating community, comfort, and exceptional cuisine.  
+Built using **HTML**, **CSS**, and **Vanilla JavaScript** with a **Pinterest-style aesthetic**, perfect for coffee lovers and food enthusiasts in Pune.
 
 ---
 
 ## ✨ Features
 
-- **Heritage Theme** – Every dish named after Maharashtra's historic forts and cities
-- **Pure Vegetarian** – 100% vegetarian menu with traditional and modern dishes
-- **Responsive Design** – Optimized for all devices (mobile, tablet, desktop)
-- **Cultural Storytelling** – Each dish connects to Maratha history
-- **Clean UI/UX** – Intuitive navigation and modern aesthetics
-- **Educational Experience** – Learn about Maharashtra's geography and heritage
+- 🎨 **Pinteresty Aesthetic** – Modern, Instagram-worthy visual style  
+- ☕ **Premium Coffee** – Artisan brews, bubble tea & specialty beverages  
+- 🍕 **Gourmet Food** – Continental & Mexican menu crafted with fresh ingredients  
+- 🐾 **Pet Friendly** – Dogs & furry little buddies welcome  
+- 📶 **Free Wi-Fi** – Work, study & chill  
+- 🌱 **Green Spaces** – Nature-inspired, refreshing ambience  
+- 📱 **Responsive UI** – Works flawlessly on mobile, tablet & desktop  
+- ✨ **Smooth Animations** – Clean scroll reveal & hover effects  
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **HTML5** – Structure and semantic content  
-- **CSS3** – Styling, layout, animations, and responsiveness  
+- 🧩 **HTML5** – Semantic structure  
+- 🎨 **CSS3** – Layout, animations & responsiveness  
+- ⚡ **Vanilla JavaScript** – Smooth user interactions  
 
 ---
 
-## 🏰 Theme Concept
+## 🏪 About Communion Cafe
 
-**Swarajya** (Self-rule) represents the foundation of the Maratha Empire. This restaurant celebrates:
+**Communion Cafe**, located in **Lohegaon, Pune**, is not just a cafe —  
+it’s a cozy community hub blending comfort, creativity, and exceptional cuisine.
 
-- 🏰 **37 unique fort and city names** from Maharashtra
-- 🌱 **Pure vegetarian cuisine** honoring traditional values
-- 📖 **Historical storytelling** through dish names
-- 🎨 **Cultural pride** in Marathi heritage
+We serve:  
+- ☕ **Artisan Coffee & Beverages**  
+- 🥐 **Fresh Pastries & Bakery Treats**  
+- 🍕 **Continental Cuisine** (Pizzas, Pastas, etc.)  
+- 🌮 **Mexican Flavors** (Tacos, Burritos, Quesadillas)  
+- 🍨 **Desserts & Affogato**  
 
-### Menu Categories:
-- **Appetizers** (Yodha Prarambh - Warrior's Beginning)
-- **Main Courses** (Rajwada Thali - Royal Feast)
-- **Breads & Rice** (Anna - Grains)
-- **Desserts** (Rajwada Mithai - Royal Sweets)
-- **Beverages** (Pey Padaarth)
+Perfect for working, reading, catching up with friends, or just unwinding ✨
 
 ---
 
-## 🚀 How to View
+## 📍 Locations
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/SurajPatil1404/SnW-Restaurant-site.git
-   ```
-2. Navigate to the project folder:
-   ```bash
-   cd SnW-Restaurant-site
-   ```
-3. Open `index.html` in your web browser.
-
-**Live Demo:** [Swarajya Kitchen](https://surajpatil1404.github.io/SnW-Restaurant-site/)
+### 📌 Pune — Main Location  
+**DY Patil Knowledge City**, Charholi Budruk, Lohegaon  
+Near Pride World City Circle — *Pune, Maharashtra 412105*  
+🕚 *11:00 AM – 11:00 PM (Mon–Sun)*  
 
 ---
 
-## 📸 Preview
-
-![Swarajya Kitchen Website](screenshots/preview.png)
-
-*Visit the live site to experience Maharashtra's heritage through food!*
+### 📌 Navi Mumbai — Second Outlet  
+**DY Patil University**, Sector 15, CBD Belapur  
+🕗 *8:00 AM – 11:00 PM (Mon–Sun)*  
 
 ---
 
-## 🤝 Contributing
+## 📸 Screenshots
 
-Contributions, issues, and feature requests are welcome!  
-Feel free to check the [issues page](https://github.com/SurajPatil1404/SnW-Restaurant-site/issues).
+> Visual preview of the cafe website & ambience.
 
----
+| 🖼️ Cafe Ambience (Home) | 🍽️ Menu Preview | 📱 Mobile UI |
+|:-----------------------:|:---------------:|:------------:|
+| ![Cafe Look](./assets/screenshots/cafe-homepage.png) | ![Menu Page](https://via.placeholder.com/400x250?text=Menu+Preview) | ![Mobile View](https://via.placeholder.com/250x400?text=Mobile+View) |
 
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-## 👤 Author
-
-**Suraj Patil**  
-- GitHub: [@SurajPatil1404](https://github.com/SurajPatil1404)
-- Website: [surajpatil1404.github.io](https://surajpatil1404.github.io)
+> 💡 Replace placeholders as soon as other screenshots are ready!
 
 ---
 
-⭐ **Star this repo if you found it helpful!**
+## 🚀 How to Run
 
-🚩 **Jai Maharashtra!**
+```bash
+git clone https://github.com/yourusername/communion-cafe.git
+cd communion-cafe
+
