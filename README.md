@@ -7,7 +7,7 @@ Built using only **HTML** and **CSS** (separate files for structure and styling)
 
 ## 🌄 **Website Preview**
 
-![Satvik Bhoj Preview]([https://b.zmtcdn.com/data/pictures/1/19785981/6d06c3fc4e9a53f7f2df3b83ec5e9553.jpg?fit=around%7C1000%3A400&crop=1000%3A400%3B%2A%2C%2A](https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200))
+![Satvik Bhoj Preview](https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=1200)
 
 ---
 
@@ -119,9 +119,9 @@ Then visit 👉 [http://localhost:8000](http://localhost:8000)
 
 ## 🤝 **Contact & Support**
 
-* 🐙 **GitHub:** [@yourusername](https://github.com/yourusername)
+* 🐙 **GitHub:** [@SurajPatil1404](https://github.com/SurajPatil1404)
 * 📍 **Location:** Pune, Maharashtra
-* 📧 **Email:** [your.email@example.com](mailto:your.email@example.com)
+* 📧 **Email:** [suraj999488@gmail.com](mailto:suraj999488@gmail.com)
 
 ---
 
