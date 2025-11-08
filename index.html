@@ -1,138 +1,461 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Swarajya Kitchen - Authentic Vegetarian Cuisine</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    :root{ --bg:#0f1115; --card:#171a21; --muted:#a9b1c3; --text:#e7ebf3; --accent:#e6b325; --pill:#243044; --border:#262b36; }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif}
-    h1,h2,h3{font-family:"Playfair Display",serif;margin:0 0 .5rem}
-    a{color:inherit;text-decoration:none}
-    .container{width:min(1100px,92%);margin-inline:auto}
-    .main-header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg, rgba(15,17,21,.95), rgba(15,17,21,.75) 70%, rgba(15,17,21,0));backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--border)}
-    .main-header .container{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .logo{font-weight:700}
-    .main-nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
-    .main-nav a{padding:8px 12px;border-radius:999px;background:var(--pill);color:var(--text)}
-    .hero{padding:64px 0;background:radial-gradient(1200px 500px at 10% -10%, #1e2533, transparent 60%), radial-gradient(1000px 400px at 110% 0%, #2b1f1a, transparent 60%)}
-    .hero .btn{display:inline-block;margin-top:14px;background:var(--accent);color:#1b1207;padding:12px 18px;border-radius:10px;font-weight:700}
-    .about{padding:48px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-    #menu{padding:56px 0}
-    #menu .section-intro{max-width:760px;margin:0 auto 28px;text-align:center;color:var(--muted)}
-    .menu-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
-    .menu-card{grid-column:span 12;background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.25)}
-    .menu-card-header{display:flex;align-items:center;gap:16px;padding:16px;border-bottom:1px solid var(--border);background:linear-gradient(180deg, #1a1f2a, #151922)}
-    .menu-card-header img{width:72px;height:72px;object-fit:cover;border-radius:12px;border:1px solid var(--border)}
-    .menu-card-header .title{display:flex;flex-direction:column}
-    .menu-card-header .title h3{font-size:1.25rem}
-    .menu-card-header .eyebrow{font-size:.85rem;color:var(--muted)}
-    .items{display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:14px;padding:16px}
-    .item{display:flex;gap:12px;padding:12px;border:1px solid var(--border);border-radius:12px;background:#131720}
-    .item .thumb{flex:0 0 72px;width:72px;height:72px;border-radius:10px;object-fit:cover;border:1px solid var(--border)}
-    .item .meta b{display:block;color:#fff}
-    .item .meta p{margin:.25rem 0 0;color:var(--muted);font-size:.95rem}
-    .appetizers .menu-card-header{background:linear-gradient(180deg,#23262e,#1a1d24)}
-    .mains .menu-card-header{background:linear-gradient(180deg,#2a2220,#1b1715)}
-    .breads .menu-card-header{background:linear-gradient(180deg,#23241c,#181910)}
-    .sides .menu-card-header{background:linear-gradient(180deg,#1e2624,#141b1a)}
-    .desserts .menu-card-header{background:linear-gradient(180deg,#241a24,#19131a)}
-    .beverages .menu-card-header{background:linear-gradient(180deg,#1a2028,#12161c)}
-    @media (min-width: 760px){ .menu-card{grid-column:span 6} }
-    @media (min-width: 1040px){ .menu-card{grid-column:span 4} }
-    @media (max-width: 560px){ .items{grid-template-columns:1fr} .main-nav ul{gap:10px} .menu-card-header img{width:64px;height:64px} }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Satvik Bhoj - Pure Vegetarian Fine Dining</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="main-header">
-    <div class="container">
-      <a href="#home" class="logo" aria-label="Swarajya Kitchen logo">🍽️ Swarajya Kitchen</a>
-      <nav class="main-nav" aria-label="Primary">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#visit">Visit Us</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero" id="home">
-    <div class="container">
-      <h1>Swarajya Kitchen</h1>
-      <p>Experience the authentic taste of pure vegetarian Maratha heritage.</p>
-      <a href="#menu" class="btn">View Our Royal Menu</a>
-    </div>
-  </section>
-
-  <section class="about" id="about">
-    <div class="container">
-      <h2>About Our Heritage</h2>
-      <p>Swarajya Kitchen brings you the finest pure vegetarian cuisine inspired by the glorious Maratha Empire. Our dishes are crafted with authentic spices and traditional recipes passed down through generations.</p>
-    </div>
-  </section>
-
-  <section id="menu">
-    <div class="container">
-      <h2>🍽️ SWARAJYA KITCHEN - Pure Vegetarian Menu</h2>
-      <p class="section-intro">Explore our royal selection of dishes across categories. Each card showcases signature items with enticing images. All images are royalty-free placeholders from Unsplash or Pexels.</p>
-      <div class="menu-grid">
-        <!-- Appetizers -->
-        <article class="menu-card appetizers" aria-labelledby="appetizers-title">
-          <div class="menu-card-header">
-            
-            <div class="title">
-              <h3 id="appetizers-title">⚔️ Appetizers</h3>
-              <span class="eyebrow">Yodha Prarambh - Warrior's Beginning</span>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                सात्विक भोज
+                <span>SATVIK BHOJ</span>
             </div>
-          </div>
-          <div class="items">
-            <div class="item"><div class="meta"><b>Mavala Paneer Tikka</b><p>Cottage cheese cubes marinated in royal spices.</p></div></div>
-            <div class="item"><div class="meta"><b>Pratapgad Spring Rolls</b><p>Crispy vegetable rolls with tamarind chutney.</p></div></div>
-            <div class="item"><div class="meta"><b>Raigad Spinach Dip</b><p>Creamy spinach-artichoke dip with garlic bread.</p></div></div>
-            <div class="item"><div class="meta"><b>Sinhagad Samosa Platter</b><p>Golden fried samosas with mint and tamarind chutney.</p></div></div>
-            <div class="item"><div class="meta"><b>Torna Fort Pakoda</b><p>Crispy mixed vegetable fritters.</p></div></div>
-            <div class="item"><div class="meta"><b>Kondana Corn Fritters</b><p>Sweet corn and cheese fritters with spicy mayo.</p></div></div>
-          </div>
-        </article>
+            <input type="checkbox" id="menuToggle" class="menu-checkbox" />
+            <label for="menuToggle" class="menu-icon">☰</label>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#specialties">Specialties</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#reservation">Reservation</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- Main Courses -->
-        <article class="menu-card mains" aria-labelledby="mains-title">
-          <div class="menu-card-header">
-            
-            <div class="title">
-              <h3 id="mains-title">🏰 Main Courses</h3>
-              <span class="eyebrow">Rajwada Thali - Royal Feast</span>
-            </div>
-          </div>
-          <div class="items">
-            <div class="item"><div class="meta"><b>Rajgad Palak Paneer</b><p>Cottage cheese in creamy spinach gravy.</p></div></div>
-            <div class="item"><div class="meta"><b>Chhatrapati Paneer Butter Masala</b><p>Rich and creamy tomato-based curry.</p></div></div>
-            <div class="item"><div class="meta"><b>Swarajya Veg Biryani</b><p>Fragrant basmati rice with mixed vegetables and spices.</p></div></div>
-            <div class="item"><div class="meta"><b>Hindavi Dal Makhani</b><p>Black lentils slow-cooked in butter and cream.</p></div></div>
-            <div class="item"><div class="meta"><b>Panhala Mix Veg Curry</b><p>Seasonal vegetables in traditional Maharashtrian gravy.</p></div></div>
-            <div class="item"><div class="meta"><b>Shivneri Royal Thali</b><p>Platter with dal, vegetables, rice, roti, and pickle.</p></div></div>
-            <div class="item"><div class="meta"><b>Vijaydurg Dal Tadka</b><p>Yellow lentils tempered with ghee and cumin.</p></div></div>
-            <div class="item"><div class="meta"><b>Kolhapur Misal Pav</b><p>Spicy sprout curry with butter-toasted pav.</p></div></div>
-            <div class="item"><div class="meta"><b>Lohagad Dum Aloo</b><p>Baby potatoes in rich cashew-tomato gravy.</p></div></div>
-          </div>
-        </article>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Experience Divine Vegetarian Cuisine</h1>
+            <p>Authentic Indian flavors crafted with pure ingredients and ancient recipes</p>
+            <a href="#reservation" class="btn">Reserve Your Table</a>
+        </div>
+    </section>
 
-        <!-- Breads & Rice -->
-        <article class="menu-card breads" aria-labelledby="breads-title">
-          <div class="menu-card-header">
-            
-            <div class="title">
-              <h3 id="breads-title">🥖 Breads & Rice</h3>
-              <span class="eyebrow">Anna-Bhakri - Staples of the Kingdom</span>
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-header">
+            <h2>Our Story</h2>
+            <p>A journey through the rich heritage of pure vegetarian Indian cuisine</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Welcome to Satvik Bhoj</h3>
+                <p>Since our inception, we have been dedicated to serving authentic pure vegetarian Indian cuisine that honors both tradition and taste. Every dish is prepared with the finest organic ingredients, following age-old recipes passed down through generations.</p>
+                <p>Our commitment to Satvik cooking principles ensures that every meal nourishes not just the body, but also the mind and soul. We believe in the power of pure, wholesome food to transform lives and bring people together.</p>
+                <p>Experience the authentic flavors of India in an atmosphere of warmth, elegance, and tradition.</p>
             </div>
-          </div>
-          <div class="items">
-            <div class="item"><div class="meta"><b>Daulatabad Butter Roti</b><p>Whole wheat flatbread brushed with ghee.</p></div></div>
-            <div class="item"><div class="meta"><b>Murud Garlic Kulcha</b><p>Stuffed bread with garlic and herbs.</p></div></div>
-            <div class="item"><div class="meta"><b>Swarajya Jeera Rice</b><p>Cumin-flavored basmati rice.</p></div></div>
-            <div class="item"><div class="meta"><b>Rohida Pulao</b
+            <div class="about-image">
+                <img src="./Satvik Bhoj - Pure Vegetarian Fine Dining_files/photo-1555939594-58d7cb561ad1" alt="Restaurant Interior" />
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="icon">🌿</div>
+                <h4>100% Pure Veg</h4>
+                <p>Completely vegetarian menu with no onion and garlic options available</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🥬</div>
+                <h4>Organic Ingredients</h4>
+                <p>Sourced from certified organic farms for maximum freshness and quality</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">👨‍🍳</div>
+                <h4>Master Chefs</h4>
+                <p>Expert culinary team trained in traditional Indian cooking techniques</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <div class="section-header">
+            <h2>Our Menu</h2>
+            <p>Discover our exquisite selection of traditional vegetarian delicacies</p>
+        </div>
+
+        <div class="menu-categories">
+            <button class="category-btn">All Dishes</button>
+            <button class="category-btn">Starters</button>
+            <button class="category-btn">Main Course</button>
+            <button class="category-btn">Breads</button>
+            <button class="category-btn">Desserts</button>
+        </div>
+
+        <div class="menu-grid">
+            <div class="menu-item">
+                <div class="menu-item-image">
+                    <img src="./Satvik Bhoj - Pure Vegetarian Fine Dining_files/photo-1601050690597-df0568f70950" alt="Paneer Tikka" />
+                    <span class="veg-badge">Pure Veg</span>
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-header">
+                        <h3>Paneer Tikka</h3>
+                        <span class="price">₹280</span>
+                    </div>
+                    <p>Cottage cheese marinated in aromatic spices and grilled to perfection in tandoor</p>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-image">
+                    <img src="./Satvik Bhoj - Pure Vegetarian Fine Dining_files/photo-1626074353765-517a681e40be" alt="Dal Makhani" />
+                    <span class="veg-badge">Pure Veg</span>
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-header">
+                        <h3>Dal Makhani</h3>
+                        <span class="price">₹220</span>
+                    </div>
+                    <p>Slow-cooked black lentils in creamy tomato gravy with butter and aromatic spices</p>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-image">
+                    <img src="./Satvik Bhoj - Pure Vegetarian Fine Dining_files/photo-1567188040759-fb8a883dc6d8" alt="Malai Kofta" />
+                    <span class="veg-badge">Pure Veg</span>
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-header">
+                        <h3>Malai Kofta</h3>
+                        <span class="price">₹260</span>
+                    </div>
+                    <p>Soft vegetable dumplings in rich creamy cashew and tomato curry</p>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-image">
+                    <img src="./Satvik Bhoj - Pure Vegetarian Fine Dining_files/photo-1599487488170-d11ec9c172f0" alt="Palak Paneer" />
+                    <span class="veg-badge">Pure Veg</span>
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-header">
+                        <h3>Palak Paneer</h3>
+                        <span class="price">₹240</span>
+                    </div>
+                    <p>Fresh cottage cheese cubes in smooth spinach gravy with traditional spices</p>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-image">
+                    <img src="./Satvik Bhoj - Pure Vegetarian Fine Dining_files/photo-1589301773859-747a80964e6c" alt="Biryani" />
+                    <span class="veg-badge">Pure Veg</span>
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-header">
+                        <h3>Veg Biryani</h3>
+                        <span class="price">₹320</span>
+                    </div>
+                    <p>Fragrant basmati rice layered with mixed vegetables and aromatic spices</p>
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-item-image">
+                    <img src="./Satvik Bhoj - Pure Vegetarian Fine Dining_files/photo-1565557623262-b51c2513a641" alt="Gulab Jamun" />
+                    <span class="veg-badge">Pure Veg</span>
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-header">
+                        <h3>Gulab Jamun</h3>
+                        <span class="price">₹120</span>
+                    </div>
+                    <p>Soft milk dumplings soaked in fragrant rose and cardamom sugar syrup</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialties Section -->
+    <section id="specialties">
+        <div class="section-header">
+            <h2>Chef's Specialties</h2>
+            <p>Signature dishes that define our culinary excellence</p>
+        </div>
+
+        <div class="specialty-grid">
+            <div class="specialty-card">
+                <h3>Rajasthani Thali</h3>
+                <p>A royal feast featuring 12 traditional Rajasthani dishes served with five types of breads, three types of rice, and traditional desserts. A complete journey through the flavors of Rajasthan.</p>
+            </div>
+            <div class="specialty-card">
+                <h3>South Indian Dosa Platter</h3>
+                <p>An assortment of crispy dosas including Masala, Rava, and Paper Dosa served with authentic sambhar, coconut chutney, and special podi powder made from family recipes.</p>
+            </div>
+            <div class="specialty-card">
+                <h3>Punjabi Feast</h3>
+                <p>Experience the richness of Punjab with our special thali featuring Dal Makhani, Shahi Paneer, Mixed Vegetable Korma, served with Butter Naan and aromatic Pulao.</p>
+            </div>
+            <div class="specialty-card">
+                <h3>Satvik Special Thali</h3>
+                <p>Pure Satvik meal without onion and garlic, featuring seasonal vegetables, lentils, rice, breads, and sweets prepared following ancient Ayurvedic principles for complete nourishment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="section-header">
+            <h2>Gallery</h2>
+            <p>A visual journey through our culinary creations and ambiance</p>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="./Satvik Bhoj - Pure Vegetarian Fine Dining_files/photo-1517248135467-4c7edcad34c4" alt="Restaurant Ambiance" />
+                <div class="gallery-overlay">
+                    <h4>Elegant Dining</h4>
+                    <p>Experience luxury in traditional settings</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="./Satvik Bhoj - Pure Vegetarian Fine Dining_files/photo-1606787366850-de6330128bfc" alt="Plated Dish" />
+                <div class="gallery-overlay">
+                    <h4>Artful Presentation</h4>
+                    <p>Every dish is a masterpiece</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="./Satvik Bhoj - Pure Vegetarian Fine Dining_files/photo-1414235077428-338989a2e8c0" alt="Dining Table" />
+                <div class="gallery-overlay">
+                    <h4>Perfect Setting</h4>
+                    <p>Ideal for family gatherings</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="./Satvik Bhoj - Pure Vegetarian Fine Dining_files/photo-1504674900247-0877df9cc836" alt="Food Preparation" />
+                <div class="gallery-overlay">
+                    <h4>Fresh Ingredients</h4>
+                    <p>Quality you can taste</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="./Satvik Bhoj - Pure Vegetarian Fine Dining_files/photo-1555939594-58d7cb561ad1(1)" alt="Restaurant Interior" />
+                <div class="gallery-overlay">
+                    <h4>Warm Ambiance</h4>
+                    <p>Traditional meets modern</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="./Satvik Bhoj - Pure Vegetarian Fine Dining_files/photo-1512621776951-a57141f2eefd" alt="Vegetable Spread" />
+                <div class="gallery-overlay">
+                    <h4>Organic Produce</h4>
+                    <p>Farm to table freshness</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="section-header">
+            <h2>What Our Guests Say</h2>
+            <p>Hear from those who have experienced our hospitality</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The most authentic vegetarian Indian cuisine I've experienced. The Rajasthani Thali was absolutely divine, and the service was impeccable. A must-visit for vegetarian food lovers!"</p>
+                <div class="testimonial-author">
+                    <div class="author-image">RK</div>
+                    <div class="author-info">
+                        <h5>Ravi Kumar</h5>
+                        <p>Food Critic</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Satvik Bhoj has become our family's favorite restaurant. The pure vegetarian options and the no-onion-garlic menu are perfect for our dietary preferences. Every dish is prepared with love and care."</p>
+                <div class="testimonial-author">
+                    <div class="author-image">PM</div>
+                    <div class="author-info">
+                        <h5>Priya Mehta</h5>
+                        <p>Regular Customer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Outstanding food quality and presentation. The Chef's Special Thali is worth every rupee. The ambiance is perfect for both family dinners and business meetings. Highly recommended!"</p>
+                <div class="testimonial-author">
+                    <div class="author-image">AS</div>
+                    <div class="author-info">
+                        <h5>Ankit Sharma</h5>
+                        <p>Business Professional</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation">
+        <div class="section-header">
+            <h2>Reserve Your Table</h2>
+            <p>Book your dining experience with us today</p>
+        </div>
+
+        <div class="reservation-container">
+            <div class="reservation-info">
+                <h3>Visit Us</h3>
+                <p>Experience the finest pure vegetarian cuisine in an elegant setting. We welcome you to join us for an unforgettable dining experience.</p>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="icon">📍</span>
+                        <div>
+                            <strong>Address:</strong><br />
+                            123 Heritage Street, Cultural District<br />
+                            Mumbai, Maharashtra 400001
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">📞</span>
+                        <div>
+                            <strong>Phone:</strong><br />
+                            +91 98765 43210<br />
+                            +91 98765 43211
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">⏰</span>
+                        <div>
+                            <strong>Hours:</strong><br />
+                            Monday - Sunday<br />
+                            11:00 AM - 11:00 PM
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon">✉️</span>
+                        <div>
+                            <strong>Email:</strong><br />
+                            reservations@satvikbhoj.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form class="reservation-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name" />
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com" />
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+91 98765 43210" />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Date *</label>
+                        <input type="date" id="date" name="date" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time *</label>
+                        <input type="time" id="time" name="time" required />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="guests">Number of Guests *</label>
+                        <select id="guests" name="guests" required>
+                            <option value="">Select guests</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                            <option value="6">6+ Guests</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="occasion">Occasion</label>
+                        <select id="occasion" name="occasion">
+                            <option value="">Select occasion</option>
+                            <option value="birthday">Birthday</option>
+                            <option value="anniversary">Anniversary</option>
+                            <option value="business">Business Meeting</option>
+                            <option value="family">Family Gathering</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Special Requests</label>
+                    <textarea id="message" name="message" placeholder="Any dietary preferences or special requests..."></textarea>
+                </div>
+
+                <button type="submit" class="btn">Confirm Reservation</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Satvik Bhoj</h3>
+                <p>Dedicated to serving authentic pure vegetarian Indian cuisine that honors tradition and nourishes the soul.</p>
+                <div class="social-links">
+                    <a href="#" title="Facebook">📘</a>
+                    <a href="#" title="Instagram">📷</a>
+                    <a href="#" title="Twitter">🐦</a>
+                    <a href="#" title="YouTube">📺</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#menu">Menu</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#reservation">Reservations</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Our Services</h3>
+                <a href="#">Dine-In</a>
+                <a href="#">Takeaway</a>
+                <a href="#">Catering Services</a>
+                <a href="#">Private Events</a>
+                <a href="#">Corporate Bookings</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>📍 123 Heritage Street, Mumbai</p>
+                <p>📞 +91 98765 43210</p>
+                <p>✉️ info@satvikbhoj.com</p>
+                <p>⏰ Mon-Sun: 11:00 AM - 11:00 PM</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Satvik Bhoj. All rights reserved. | Crafted with love for pure vegetarian cuisine</p>
+        </div>
+    </footer>
+</body>
+</html>
+
