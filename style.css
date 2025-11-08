@@ -104,7 +104,7 @@ nav {
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-                url('images/main.png') center/cover;
+                url('images/images/main.png') center/cover;
     height: 90vh;
     display: flex;
     align-items: center;
